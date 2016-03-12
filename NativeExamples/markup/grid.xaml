@@ -1,0 +1,36 @@
+﻿<Grid xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Define a 3x3 grid with a center cell twice the size -->
+    <Grid.RowDefinitions>
+        <RowDefinition />
+        <RowDefinition Height="2*" />
+        <RowDefinition />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition />
+        <ColumnDefinition Width="2*" />
+        <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+
+    <!-- Define a style for all the buttons -->
+    <Grid.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Foreground" Value="PapayaWhip"/>
+            <Setter Property="Background" Value="Chocolate"/>
+        </Style>
+    </Grid.Resources>
+
+    <!-- Row 0 -->
+    <Image                                      Source="www/images/ace.png" />
+    <Button                     Grid.Column="1" Style="{StaticResource ButtonStyle}">0,1</Button>
+    <Button                     Grid.Column="2" Style="{StaticResource ButtonStyle}">0,2</Button>
+    <!-- Row 1 -->
+    <Button        Grid.Row="1"                 Style="{StaticResource ButtonStyle}">1,0</Button>
+    <ToggleSwitch  Grid.Row="1" Grid.Column="1" IsOn="True" Header="Center"/>
+    <Button        Grid.Row="1" Grid.Column="2" Style="{StaticResource ButtonStyle}">1,2</Button>
+    <!-- Row 2 -->
+    <Button        Grid.Row="2"                 Style="{StaticResource ButtonStyle}">2,0</Button>
+    <Button        Grid.Row="2" Grid.Column="1" Style="{StaticResource ButtonStyle}">2,1</Button>
+    <DatePicker    Grid.Row="2" Grid.Column="2" />
+</Grid>

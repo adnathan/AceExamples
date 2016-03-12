@@ -1,0 +1,30 @@
+﻿<StackPanel xmlns:ace="using:run.ace"
+            xmlns:if="using:if"
+            xmlns:ios="using:ios"
+            xmlns:android="using:android.widget"
+            xmlns:myNamespace="using:myNamespace">
+    <TextBlock FontSize="22" FontWeight="Bold" Margin="20" HorizontalAlignment="Center">
+        Conditional XAML
+    </TextBlock>
+
+    <TextBlock FontSize="22" FontWeight="Bold" Margin="20" HorizontalAlignment="Center">
+        Using if:iOS and if:Android:
+    </TextBlock>
+    
+    <!-- Show either a stepper or rating bar -->
+    <if:iOS>
+        <ios:UIStepper Margin="20" />
+    </if:iOS>
+    <if:Android>
+        <android:RatingBar Rating="1" StepSize="1" Margin="20" Width="280" />
+    </if:Android>
+
+    <TextBlock FontSize="22" FontWeight="Bold" Margin="20" HorizontalAlignment="Center">
+        Using a JavaScript Wrapper:
+    </TextBlock>
+
+    <!-- Show either a stepper or rating bar -->
+    <myNamespace:MyStepperOrRating Margin="20" Width="280"/>
+
+    <Button ace:On.Click="ace.goBack()">Back</Button>
+</StackPanel>
