@@ -622,11 +622,11 @@
 
         var style = {
             FontWeight: "Bold",
-            FontSize: 40,
+            FontSize: 100,
             Foreground: "LemonChiffon",
             Background: "SteelBlue",
             Height: 200,
-            Margin: "150,20"
+            Margin: "100,20"
         };
 
         for (var i = 0; i < 4; i++) {
